@@ -57,9 +57,12 @@ M.setup = function()
       { name = "cmdline" },
     }),
     matching = {
+---@diagnostic disable-next-line: missing-fields
       disallow_symbol_noprefix_matching = false,
     }
   })
+
+  require("luasnip.loaders.from_vscode").lazy_load()
 end
 
 return M;

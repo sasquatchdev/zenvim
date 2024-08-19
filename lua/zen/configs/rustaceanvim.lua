@@ -7,7 +7,7 @@ M.setup = function()
       on_attach = require("zen.configs.lspconfig").on_attach,
     },
     tools = {
-      hover_action = {
+      hover_actions = {
         auto_focus = true
       }
     }
