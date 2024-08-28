@@ -1,15 +1,15 @@
 local M = {};
 
-M.opts = {
+M.opts = function() return {
   extensions = {
     ["ui-select"] = {
       require("telescope.themes").get_dropdown({})
     }
   }
-}
+} end
 
 M.setup = function()
-  require("telescope").setup(M.opts)
+  require("telescope").setup(M.opts())
   require("telescope").load_extension("ui-select")
 
   local builtin = require("telescope.builtin");
